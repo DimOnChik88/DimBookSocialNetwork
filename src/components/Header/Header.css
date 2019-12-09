@@ -1,0 +1,10 @@
+.header {
+    grid-area: header;
+    background-color: darkseagreen;
+}
+
+.header img {
+    height: 40px;
+    width: 40px;
+    align-content: center;
+}

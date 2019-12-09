@@ -1,0 +1,12 @@
+.nav {
+    grid-area: navBar;
+    background-color: darkorchid;
+    text-align: left;
+}
+.title {
+    color: white;
+}
+
+.title.active {
+    color: gold;
+}

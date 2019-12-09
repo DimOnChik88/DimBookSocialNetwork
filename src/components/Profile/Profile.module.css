@@ -1,0 +1,8 @@
+.content {
+    grid-area: content;
+    background-color: cornsilk;
+}
+
+.item {
+    color: lightslategray;
+}
