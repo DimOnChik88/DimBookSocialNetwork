@@ -1,12 +1,14 @@
 .nav {
     grid-area: navBar;
-    background-color: darkorchid;
+    background-color: #59b99a;
     text-align: left;
+    padding: 10px;
 }
-.title {
+.title a {
     color: white;
+    text-decoration: none;
 }
 
-.title.active {
+.title a.active {
     color: gold;
 }

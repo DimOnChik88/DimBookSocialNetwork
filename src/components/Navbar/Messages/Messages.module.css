@@ -1,0 +1,25 @@
+.messages {
+    display: grid;
+    grid-template-columns: 5fr 15fr;
+}
+
+.users {
+    padding: 10px;
+
+}
+
+.users a {
+    text-decoration: none;
+    color: saddlebrown;
+}
+
+
+
+.message {
+    padding: 10px;
+}
+
+.messages textarea {
+    width: 500px;
+    height: 35%;
+}

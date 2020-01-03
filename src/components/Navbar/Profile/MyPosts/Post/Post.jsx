@@ -1,6 +1,6 @@
 import React from "react";
 import style from './Post.module.css';
-import Avatar from "../../../constant/Avatars";
+import Avatar from "../../../../constant/Avatars";
 
 const Post = (props) => {
     return (
@@ -8,7 +8,7 @@ const Post = (props) => {
             <img src={Avatar.male} alt="boy"/>
             {props.message}
             <div>
-                <span>Like</span>
+                <span>Like {props.likes}</span>
             </div>
         </div>
     )
