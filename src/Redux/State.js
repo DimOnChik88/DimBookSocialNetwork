@@ -1,7 +1,8 @@
-import {renderEntireTree} from "../render";
+let renderEntireTree = () => {
+    console.log('State changed');
+};
 
-
-let State = {
+let state = {
     profile: {
         posts: [
             {id: 1, message: 'Hi world', likesCount: 26},
@@ -34,32 +35,36 @@ let State = {
     }
 };
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 6,
-        message: State.profile.newPostChange,
+        message: state.profile.newPostChange,
         likeCount: 0
     }
-    State.profile.posts.push(newPost);
-    State.profile.newPostChange = '';
-    renderEntireTree(State);
+    state.profile.posts.push(newPost);
+    state.profile.newPostChange = '';
+    renderEntireTree(state);
 };
 
-export let updateNewPost = (newText) => {
-    State.profile.newPostChange = newText;
-    renderEntireTree(State);
+export const updateNewPost = (newText) => {
+    state.profile.newPostChange = newText;
+    renderEntireTree(state);
 };
 
-export let createNewMessage = (newText) => {
-    State.messages.newMessage = newText;
-    renderEntireTree(State);
+export const createNewMessage = (newText) => {
+    state.messages.newMessage = newText;
+    renderEntireTree(state);
 };
 
-export let leaveMessage = () => {
-  let newMessage = State.messages.newMessage;
-  State.messages.messageArray.push(newMessage);
-    State.messages.newMessage='';
-    renderEntireTree(State);
+export const leaveMessage = () => {
+  let newMessage = state.messages.newMessage;
+  state.messages.messageArray.push(newMessage);
+    state.messages.newMessage='';
+    renderEntireTree(state);
 };
 
-export default State;
+export const subscriber = (observer) => {
+    renderEntireTree = observer;
+};
+
+export default state;

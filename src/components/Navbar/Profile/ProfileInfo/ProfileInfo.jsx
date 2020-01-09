@@ -5,7 +5,7 @@ const ProfileInfo = () => {
     return (
         <div>
             <div><
-                img src="http://digitalimagemakerworld.com/images/picture/37509081-picture.jpg" alt="avatar"/>
+                img src="https://3.bp.blogspot.com/-wx2aY298hR4/XHMvNc6eTaI/AAAAAAAAG1Q/hV1favdIfkQNYPd35M3iU_l8Ot1BbMoogCHMYCw/s1600/best-ubuntu-hd-wallpapers-for-download-mytechshout.jpg" alt="avatar"/>
             </div>
             <div className={style.descriptionBlock}>
                 ava + description
