@@ -1,24 +1,24 @@
 import React from "react";
+import {createNewMessage, leaveMessage} from "../../../../Redux/messages-reducer";
 
 
 const MessageItem = (props) => {
-    let { createNewMessage, newMessage,leaveMessage} = props;
-    let ref = React.createRef();
+    let {newMessageText} = props;
 
-    let typeNewMessage=()=> {
-        let text = ref.current.value;
-        createNewMessage(text)
-    }
+    let typeNewMessage = (event) => {
+        let text = event.target.value;
+        props.dispatch(createNewMessage(text))
+    };
 
     let sendMessage = () => {
-        leaveMessage();
+        props.dispatch(leaveMessage())
     };
 
     return (
         <div>
-            <textarea ref={ref}
+            <textarea placeholder='enter your message'
                       onChange={typeNewMessage}
-                      value={newMessage}/>
+                      value={newMessageText}/>
             <button onClick={sendMessage}>Send</button>
         </div>
     )

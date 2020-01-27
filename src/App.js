@@ -21,13 +21,11 @@ const App = (props) => {
                 <NavBar friends={messages.usersArray}/>
                 <div className="app-wrapper-content">
                     <Route path='/profile' render={() => <Profile postData={profile}
-                                                                  addPost={props.addPost}
-                                                                  updateNewPost={props.updateNewPost}
+                                                                  dispatch={props.dispatch}
                     />}/>
                     <Route path='/messages'
                            render={() => <Messages messages={messages}
-                                                   createNewMessage={props.createNewMessage}
-                                                   leaveMessage={props.leaveMessage}
+                                                   dispatch={props.dispatch}
                            />}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>

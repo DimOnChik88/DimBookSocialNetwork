@@ -1,0 +1,4 @@
+export const ADD_POST = 'ADD-POST';
+export const UPDATE_NEW_POST  = 'UPDATE-NEW-POST';
+export const CREATE_NEW_MESSAGE = 'CREATE-NEW-MESSAGE';
+export const LEAVE_MESSAGE = 'LEAVE-MESSAGE';

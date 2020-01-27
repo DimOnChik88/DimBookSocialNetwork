@@ -6,7 +6,7 @@ import Mess from "./MessageItem/Mess";
 
 
 const Messages = (props) => {
-    const {createNewMessage, messages, leaveMessage} = props;
+    const { messages } = props;
 
     let userElement = messages.usersArray.map(user => <DialogItem name={user.name} id={user.id} gender={user.gender}/>
     );
@@ -17,9 +17,8 @@ const Messages = (props) => {
                 {userElement}
             </div>
             <div className={style.message}>
-                <MessageItem newMessage={messages.newMessage}
-                             createNewMessage={createNewMessage}
-                             leaveMessage={leaveMessage}/>
+                <MessageItem newMessageText={messages.newMessageText}
+                             dispatch={props.dispatch}/>
                 {messageElement}
             </div>
 
